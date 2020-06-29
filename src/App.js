@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from "./components/header/header";
 import SidebarNav from "./components/sidebar-nav/sidebarNav";
-import ContentProfile from "./components/content-profile/contentProfile";
+import ContentProfile from "./components/content-profile/content-profile";
 
 import './App.css';
 

@@ -1,0 +1,27 @@
+form[name="new-post"] {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+}
+form[name="new-post"] label{
+    font-size: 18px;
+    color: #987EF5;
+
+}
+form[name="new-post"] textarea{
+    resize: vertical;
+    min-height: 80px;
+    padding: 10px;
+    font-size: 16px;
+    margin: 14px 0;
+}
+form[name="new-post"] button{
+    align-self: flex-end;
+}
+.title-posts {
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: #987EF5;
+}
