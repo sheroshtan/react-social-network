@@ -1,10 +1,12 @@
 import React from "react";
 import MyPosts from "../my-posts/my-posts";
-
-import './profile.css';
 import ProfileInfo from "../profile-info/profile-info";
 
+import './profile.css';
+
+
 const Profile = () => {
+
     return (
         <div>
 
