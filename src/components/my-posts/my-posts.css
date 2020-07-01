@@ -1,4 +1,4 @@
-form[name="new-post"] {
+form.form-default {
     display: flex;
     flex-direction: column;
     margin-bottom: 14px;
@@ -8,14 +8,14 @@ form[name="new-post"] label{
     color: #987EF5;
 
 }
-form[name="new-post"] textarea{
-    resize: vertical;
+form.form-default textarea{
+    resize: none;
     min-height: 80px;
     padding: 10px;
     font-size: 16px;
     margin: 14px 0;
 }
-form[name="new-post"] button{
+form.form-default button{
     align-self: flex-end;
 }
 .title-posts {

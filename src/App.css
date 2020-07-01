@@ -1,6 +1,10 @@
 /*RESET START*/
 a {
   text-decoration: none;
+  color: #404040;
+}
+a:active, a:hover, a:focus {
+  color: #404040;
 }
 textarea {
   outline: none;
@@ -55,11 +59,11 @@ button {
 main {
   grid-area: main;
   background-color: #EDEFF0;
-  height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
 }
 .content {
   grid-area: content;
-  padding: 10px 15px;
+  padding: 20px;
   border-radius: 3px;
 }
 main .container.main-container {

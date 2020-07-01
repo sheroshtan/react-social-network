@@ -1,15 +1,17 @@
 import React from "react";
+import {NavLink} from "react-router-dom";
 
 import './sidebarNav.css';
+
 
 const SidebarNav = () => {
     return (
         <nav className="sidebar-nav">
-            <a href="#">Profile</a>
-            <a href="#">Friends</a>
-            <a href="#">Messages</a>
-            <a href="#">News</a>
-            <a href="#">Settings</a>
+            <NavLink to="/profile">Profile</NavLink>
+            <NavLink to="/dialogs">Messages</NavLink>
+            <NavLink to="/friends">Friends</NavLink>
+            <NavLink to="/news">News</NavLink>
+            <NavLink to="/settings">Settings</NavLink>
         </nav>
     )
 }

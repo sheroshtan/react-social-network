@@ -1,0 +1,38 @@
+.dialogs {
+    grid-template-columns: 2fr 10fr;
+}
+.dialog-item a{
+    display: inline-block;
+    padding: 8px 10px;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+.dialog-item a.active-dialog{
+    color: #987EF5;
+    font-weight: 500;
+}
+.dialog-item:hover a{
+    color: #987EF5;
+}
+.message-item {
+    border: 1px solid #edeff0;
+    padding: 10px;
+    border-radius: 4px;
+}
+.message-item.own-message {
+    background-color: #edeff0ad;
+    border: none;
+}
+.message-item .message-info{
+    display: block;
+    margin-bottom: 4px;
+    color: #987EF5;
+}
+.message-item .message {
+    text-align: justify;
+    display: block;
+}
+.message-item + .message-item {
+    margin-top: 14px;
+}

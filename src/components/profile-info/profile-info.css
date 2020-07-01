@@ -1,0 +1,6 @@
+.profile-info {
+    display: flex;
+}
+.profile-info img {
+    margin-right: 10px;
+}
