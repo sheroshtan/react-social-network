@@ -1,8 +1,9 @@
 import React from "react";
 import Dialog from "./dialog/dialog";
 import Message from "./message/message";
-
 import './dialogs.css';
+import {createChangeMessageAction, createSendMessageAction} from "../../redux/messages-page-reducer";
+
 
 const Dialogs = (props) => {
 
@@ -10,9 +11,17 @@ const Dialogs = (props) => {
 
     const newMessage = React.createRef();
 
-    function sendMessage(e) {
+    const sendMessage = () => {
+        props.onSendMessage();
+    }
+
+    const changeMessage = (e) => {
+        const text = e.target.value;
+        props.onChangeMessage(text);
+    }
+
+    const formPreventDefault = (e) => {
         e.preventDefault();
-        console.log(newMessage.current.value);
     }
 
     const dialogItems = conversationsData
@@ -24,7 +33,6 @@ const Dialogs = (props) => {
 
     return (
         <div className="dialogs grid">
-
             <div className="dialog-items">
                 {
                     dialogItems
@@ -32,20 +40,22 @@ const Dialogs = (props) => {
             </div>
 
             <div className="messaging">
-
                 <div className="messages">
                     {
                         messageItems
                     }
                 </div>
 
-                <form name="message-form" className="form-default">
-                    <textarea name="new-message" id="new-message" ref={newMessage}></textarea>
+                <form name="message-form" className="form-default" onSubmit={formPreventDefault}>
+                    <textarea name="new-message"
+                              id="new-message"
+                              ref={newMessage}
+                              onChange={changeMessage}
+                              value={props.inputValue}
+                    />
                     <button className="btn purple btn-add-active" onClick={sendMessage}>Send</button>
                 </form>
-
             </div>
-
         </div>
     )
 }

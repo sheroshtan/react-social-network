@@ -8,6 +8,8 @@ const Post = (props) => {
 
             <div className="post-content">
 
+
+
                 <img src="https://d2w4qhtqw2dbsq.cloudfront.net/profile_live/4353924/large.jpg" alt="avatar" />
 
                 <p>{ props.message }</p>

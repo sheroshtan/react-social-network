@@ -1,26 +1,30 @@
 import React from "react";
 import Post from "./post/post";
+import { createAddPostAction,
+         createChangePostInputAction } from "../../../redux/profile-page-reducer";
 
 import './my-posts.css';
+
+
 
 const MyPosts = (props) => {
 
     const { postsData, inputValue } = props;
 
-    let newMessage = React.createRef();
+    const newMessage = React.createRef();
 
     const addPost = () => {
-        props.addPost();
-    }
+        props.onAddPost();
+    };
+
+    const changePost = (e) => {
+        let text = e.target.value;
+        props.onChangePost(text);
+    };
 
     const formPreventDefault = (e) => {
         e.preventDefault();
-    }
-
-    const changePost = () => {
-       let text = newMessage.current.value;
-       props.onChangePostInput(text);
-    }
+    };
 
     return (
         <div className="posts-wrapper">
