@@ -27,7 +27,7 @@ const App = (props) => {
                         />
 
                         <Route path="/dialogs"
-                               render={() => <DialogsContainer store={props.store}/>}
+                               render={() => <DialogsContainer />}
                         />
 
                         <Route path="/friends" component={Friends}/>

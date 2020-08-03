@@ -1,11 +1,6 @@
 import React from "react";
 import Post from "./post/post";
-import { createAddPostAction,
-         createChangePostInputAction } from "../../../redux/profile-page-reducer";
-
 import './my-posts.css';
-
-
 
 const MyPosts = (props) => {
 
