@@ -3,14 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="33f5795d-624b-4bdb-a098-94decb29fed0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dialogs/dialogs-container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dialogs/dialogs-container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dialogs/dialogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dialogs/dialogs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/my-posts/my-posts-container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/my-posts/my-posts-container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/my-posts/my-posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/my-posts/my-posts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/messages-page-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/messages-page-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profile-page-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-page-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +68,8 @@
       <workItem from="1596028784109" duration="7216000" />
       <workItem from="1596207518925" duration="1880000" />
       <workItem from="1596281838485" duration="6970000" />
-      <workItem from="1596457386207" duration="3612000" />
+      <workItem from="1596457386207" duration="4084000" />
+      <workItem from="1596581679112" duration="6660000" />
     </task>
     <servers />
   </component>

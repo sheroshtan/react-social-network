@@ -41,35 +41,30 @@ let initialState = {
 };
 
 const messagesPageReducer = (state = initialState, action) => {
-
     switch (action.type) {
 
         case SEND_MESSAGE: {
-
             const lastMessageId = state.messagesData[state.messagesData.length - 1].id;
-            const messageText = state.inputValue;
-
             const newMessage = {
                 id: (lastMessageId + 1),
-                //date: `${action.sender}. ${this.getDateOfMessage()}`,
+                date: `${action.sender}. ${getDateOfMessage()}`,
                 sender: "own",
-                message: messageText
+                message: state.inputValue
             }
 
-            state.messagesData.push(newMessage);
-            state.inputValue = '';
-
-            console.log("sendMessage", state.messagesData); //test
-            return state;
+            return {
+                ...state,
+                messagesData: [...state.messagesData, newMessage],
+                inputValue: ''
+            }
 
         }
 
         case ON_CHANGE_MESSAGE_INPUT: {
-
-            state.inputValue = action.text;
-            console.log(state.inputValue); // test
-            return state;
-
+            return {
+                ...state,
+                inputValue: action.text,
+            };
         }
 
         default: {
@@ -90,6 +85,15 @@ export const createChangeMessageAction = (text) => {
         type: ON_CHANGE_MESSAGE_INPUT,
         text: text
     }
+}
+
+export const getDateOfMessage = () => {
+    const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes() < 10 ? '0' + now.getMinutes() : now.getMinutes();
+
+    return `${weekDays[now.getDay()]}, ${hours}:${minutes}`;
 }
 
 export default messagesPageReducer;

@@ -11,7 +11,6 @@ let initialState = {
 };
 
 const profilePageReducer = (state = initialState, action) => {
-
     switch (action.type) {
 
         case ADD_POST : {
@@ -24,19 +23,18 @@ const profilePageReducer = (state = initialState, action) => {
                 text: postText
             }
 
-            state.postsData.push(newPost);
-            state.inputValue = '';
-
-            console.log("addPost", state.postsData); // test
-
-            return state;
+            return {
+                ...state,
+                postsData: [...state.postsData, newPost],
+                inputValue: ''
+            };
         }
 
         case ON_CHANGE_POST_INPUT : {
-            state.inputValue = action.text;
-            console.log(state.inputValue); // test
-
-            return state;
+            return {
+                ...state,
+                inputValue: action.text
+            };
         }
 
         default:
@@ -44,7 +42,7 @@ const profilePageReducer = (state = initialState, action) => {
     }
 }
 
-export const createAddPostAction = () => ({type: ADD_POST});
+export const createAddPostAction = () => ( {type: ADD_POST} );
 
 export const createChangePostInputAction = (text) => {
     return {
