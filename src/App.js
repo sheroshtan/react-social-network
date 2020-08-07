@@ -9,6 +9,7 @@ import Settings from "./components/settings/settings";
 
 import './App.css';
 import DialogsContainer from "./components/dialogs/dialogs-container";
+import UsersContainer from "./components/users/users-container";
 
 
 const App = (props) => {
@@ -23,12 +24,13 @@ const App = (props) => {
 
                     <div className='content bg-white'>
                         <Route path="/profile"
-                               render={() => <Profile store={props.store}/>}
-                        />
+                               render={() => <Profile />}/>
 
                         <Route path="/dialogs"
-                               render={() => <DialogsContainer />}
-                        />
+                               render={() => <DialogsContainer />}/>
+
+                        <Route path="/users"
+                               render={() => <UsersContainer />}/>
 
                         <Route path="/friends" component={Friends}/>
 

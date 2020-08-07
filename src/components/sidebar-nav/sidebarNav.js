@@ -9,6 +9,7 @@ const SidebarNav = () => {
         <nav className="sidebar-nav">
             <NavLink to="/profile">Profile</NavLink>
             <NavLink to="/dialogs">Messages</NavLink>
+            <NavLink to="/users">Users</NavLink>
             <NavLink to="/friends">Friends</NavLink>
             <NavLink to="/news">News</NavLink>
             <NavLink to="/settings">Settings</NavLink>

@@ -12,7 +12,6 @@ let initialState = {
 
 const profilePageReducer = (state = initialState, action) => {
     switch (action.type) {
-
         case ADD_POST : {
             const lastPostId = state.postsData[state.postsData.length - 1].id
             const postText = state.inputValue;

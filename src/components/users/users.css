@@ -1,0 +1,62 @@
+.users-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.users-wrapper .user {
+    display: flex;
+}
+.users-wrapper .user + .user{
+    margin-top: 12px;
+}
+.users-wrapper .user .user-photo img {
+    display: block;
+    width: 100px;
+    margin-bottom: 6px;
+}
+.users-wrapper .user .user-photo .btn-follow {
+    display: inline-block;
+    padding: 8px 10px;
+    border-radius: 3px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #987EF5;
+    color: #fff;
+    border: 1px solid #987EF5;
+}
+.users-wrapper .user .user-photo .btn-follow.followed {
+    background-color: transparent;
+    color: #987EF5;
+}
+.users-wrapper .user .user-photo .btn-follow:hover {
+    background-color: #7abc64;
+    border-color: #7abc64;
+}
+.users-wrapper .user .user-photo .btn-follow.followed:hover {
+    background-color: #d12648;
+    color: #fff;
+    border-color: #d12648;
+}
+.users-wrapper .user .user-info{
+    display: flex;
+    font-size: 18px;
+    margin-left: 14px;
+}
+.users-wrapper .user .user-info .user-name{
+    color: #987EF5;
+}
+.users-wrapper .user .user-info .user-location{
+    margin: 10px 0;
+}
+.users-wrapper .user .user-info .user-status{
+    font-weight: 300;
+    font-style: italic;
+    color: #987EF5;
+}
+.users-wrapper .btn-showMore-group {
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    border-top: 1px solid #987EF5;
+}

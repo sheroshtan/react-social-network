@@ -1,14 +1,14 @@
 import {combineReducers, createStore} from "redux";
 import profilePageReducer from "./profile-page-reducer";
 import messagesPageReducer from "./messages-page-reducer";
+import usersPageReducer from "./users-page-reducer";
 
-let reducers = combineReducers({
+const reducers = combineReducers({
     profilePage: profilePageReducer,
-    messagesPage: messagesPageReducer
+    messagesPage: messagesPageReducer,
+    usersPage: usersPageReducer
 });
 
-let store = createStore(reducers);
-
-
+const store = createStore(reducers);
 
 export default store;

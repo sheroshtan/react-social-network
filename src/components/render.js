@@ -1,3 +1,4 @@
+/*
 import ReactDOM from "react-dom";
 import {BrowserRouter} from "react-router-dom";
 import App from "../App";
@@ -14,4 +15,4 @@ export function renderEntireTree(state) {
         </BrowserRouter>,
 
         document.getElementById('root'));
-}
+}*/
