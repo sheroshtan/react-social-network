@@ -4,16 +4,18 @@ const User = (props) => {
     return (
         <div className="user">
             <div className="user-photo">
-                <img src={props.img} alt="user-avatar"/>
-                <button className={props.isFollow ? "btn-follow followed" : "btn-follow"}>
-                    { props.isFollow ? 'Unfollow' : 'Follow' }
-                </button>
+                <img src={props.user.imgUrl} alt="user-avatar"/>
+                {
+                    props.user.isFollowed
+                        ? <button className={"btn-follow followed"} onClick={() => props.unFollow(props.user.id)}>Unfollow</button>
+                        : <button className={"btn-follow"} onClick={() => props.follow(props.user.id)}>Follow</button>
+                }
             </div>
             <div className="user-info">
                 <div className="user-showcase">
-                    <div className="user-name">{props.name}</div>
-                    <div className='user-location'>{`${props.city}, ${props.country}`}</div>
-                    <div className="user-status">{props.status}</div>
+                    <div className="user-name">{props.user.fullName}</div>
+                    <div className='user-location'>{`${props.user.location.city}, ${props.user.location.country}`}</div>
+                    <div className="user-status">{props.user.status}</div>
                 </div>
             </div>
         </div>

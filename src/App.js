@@ -17,7 +17,6 @@ const App = (props) => {
     return (
         <div className="app-wrapper grid">
             <Header/>
-
             <main>
                 <div className="container main-container grid">
                     <SidebarNav/>

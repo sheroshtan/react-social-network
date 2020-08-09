@@ -1,27 +1,23 @@
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
-const FOLLOW_TOGGLE = 'FOLLOW_TOGGLE';
-
+const SET_USERS = 'SET_USERS';
 
 let initialState = {
-    users:[
-        {id: 1, isFollow: false, fullName: "Maria C.", status: "Lorem ipsum dolor sit amet.", location: { country: "Ukraine", city: "Kharkiv" }, imgUrl: "https://cdn.pixabay.com/photo/2014/04/03/10/32/user-310807_960_720.png"},
-        {id: 2, isFollow: true, fullName: "Terrance W.", status: "Ad, sunt?", location: { country: "Russia", city: "Moscow" }, imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSpMBCGHK-uHMNtS5WvYh6Sce-xEnJ-hByyuLp_ticRZwqGXg-&s"},
-        {id: 3, isFollow: false, fullName: "Jessica K.", status: "Consequuntur, dolorum eius omnis possimus.", location: { country: "Belarus", city: 'Minsk' }, imgUrl: "https://www.shareicon.net/data/512x512/2016/07/26/802031_user_512x512.png"}
-    ]
+    users: []
 };
 
 const usersPageReducer = (state = initialState, action) => {
     switch (action.type) {
         case FOLLOW : {
-            action.target.classList = "btn-follow followed";
+            //action.target.classList = "btn-follow followed";
+            console.log('follow');
             return {
                 ...state,
-                users: [...state.users].map(user => {
-                    if(user.id === action.id) {
+                users: state.users.map(user => {
+                    if(user.id === action.userId) {
                         return {
                             ...user,
-                            isFollow: 'unfollow'
+                            isFollowed: true
                         }
                     }
                     return  {...user};
@@ -29,26 +25,31 @@ const usersPageReducer = (state = initialState, action) => {
             };
         }
         case UNFOLLOW : {
-            action.target.classList = "btn-follow";
+            console.log('Unfollow');
+            //action.target.classList = "btn-follow";
             return {
                 ...state,
-                users: [...state.users].map(user => {
-                    if(user.id === action.id) {
+                users: state.users.map(user => {
+                    if(user.id === action.userId) {
                         return {
                             ...user,
-                            isFollow: 'follow'
+                            isFollowed: false
                         }
                     }
                     return  {...user};
                 })
             };
         }
+        case SET_USERS: {
+            return {...state, users: [...state.users, ...action.users]}
+        }
         default:
             return state;
     }
 }
 
-export const createFollowtAction = (userId, target) => ( {type: FOLLOW, id: userId, target: target} );
-export const createUnfollowtAction = (userId, target) => ( {type: UNFOLLOW, id: userId, target: target} );
+export const followAC = (userId, target) => ( {type: FOLLOW, userId, target} );
+export const unfollowAC = (userId, target) => ( {type: UNFOLLOW, userId, target} );
+export const setUsersAC = (users) => ( {type: SET_USERS, users} );
 
 export default usersPageReducer;
