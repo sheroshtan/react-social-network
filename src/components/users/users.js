@@ -1,35 +1,67 @@
 import React from "react";
 import './users.css';
 import User from "./user";
+import * as axios from "axios";
 
-const Users = (props) => {
-    if(!props.users.length) {
-        props.setUsers(
-            [
-                {id: 1, isFollowed: false, fullName: "Maria C.", status: "Lorem ipsum dolor sit amet.", location: { country: "Ukraine", city: "Kharkiv" }, imgUrl: "https://cdn.pixabay.com/photo/2014/04/03/10/32/user-310807_960_720.png"},
-                {id: 2, isFollowed: true, fullName: "Terrance W.", status: "Ad, sunt?", location: { country: "Russia", city: "Moscow" }, imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSpMBCGHK-uHMNtS5WvYh6Sce-xEnJ-hByyuLp_ticRZwqGXg-&s"},
-                {id: 3, isFollowed: false, fullName: "Jessica K.", status: "Consequuntur, dolorum eius omnis possimus.", location: { country: "Belarus", city: 'Minsk' }, imgUrl: "https://www.shareicon.net/data/512x512/2016/07/26/802031_user_512x512.png"}
-            ]
-        );
+class Users extends React.Component {
+
+    componentDidMount() {
+        if(!this.props.users.length) {
+            axios
+                .get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}#count=${this.props.pageSize}`)
+                .then(res => {
+                    this.props.setUsers(res.data.items);
+                    return res;
+                })
+                .then(res => this.props.setTotalUsersCount(res.data.totalCount))
+        }
     }
 
-    const users = props.users.map(user => <User key={user.id}
-                                                user={user}
-                                                follow={props.follow}
-                                                unFollow={props.unFollow}/>);
+    onChangePage = (page) => {
+        this.props.changePage(page);
+        axios
+            .get(`https://social-network.samuraijs.com/api/1.0/users?page=${page}#count=${this.props.pageSize}`)
+            .then(res => this.props.setUsers(res.data.items))
+    }
 
-    return (
-        <div className='users-wrapper'>
-            <div>
-                {
-                    users
-                }
+    render() {
+        let pages = [];
+        const pagesCount = Math.ceil(this.props.totalUsersCount / this.props.pageSize);
+        const users = this.props.users.map(user => <User key={user.id}
+                                                    user={user}
+                                                    follow={this.props.follow}
+                                                    unFollow={this.props.unFollow}/>);
+
+        for(let i = 1; i <= pagesCount; i++) {
+            pages.push(i);
+        }
+
+        const pagesHtml = pages.map(page => {
+            return <span key={page}
+                         className={this.props.currentPage === page ? 'selected-page' : ''}
+                         onClick={() => this.onChangePage(page)}>
+                         { page }
+                   </span>
+        });
+
+        return (
+            <div className='users-wrapper'>
+                <div>
+                    {
+                        users
+                    }
+                </div>
+                <div className="users-pagination">
+                    {
+                        pagesHtml
+                    }
+                </div>
+                <div className="btn-showMore-group">
+                    <button className="btn purple">Show More</button>
+                </div>
             </div>
-            <div className="btn-showMore-group">
-                <button className="btn purple">Show More</button>
-            </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default Users;

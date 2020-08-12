@@ -57,6 +57,21 @@
     display: flex;
     padding-top: 20px;
     justify-content: center;
-    margin-top: 20px;
     border-top: 1px solid #987EF5;
+}
+.users-pagination {
+    padding: 20px;
+    text-align: center;
+}
+.users-pagination span{
+    display: inline-block;
+    color: #987EF5;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+.users-pagination span:hover{
+    background-color: #987ef514;
+}
+.users-pagination .selected-page {
+    background-color: #987ef514;
 }
