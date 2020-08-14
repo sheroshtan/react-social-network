@@ -20,14 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33f5795d-624b-4bdb-a098-94decb29fed0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/common/preloader/preloader.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/preloader/preloader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/preloader-image.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/profile-info/profile-info.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profile-info/profile-info.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/users/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/users/users-container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/users-container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/users/users.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/users.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/users/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/users/users.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/users-page-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-page-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,8 +37,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -63,7 +62,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/users" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -75,7 +74,11 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/common" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/images" />
       <recent name="$PROJECT_DIR$/src/components/users" />
       <recent name="$PROJECT_DIR$/src/redux" />
       <recent name="$PROJECT_DIR$/src/components/dialogs" />
@@ -112,6 +115,7 @@
       <workItem from="1597132149168" duration="2624000" />
       <workItem from="1597213939461" duration="8428000" />
       <workItem from="1597230475770" duration="3605000" />
+      <workItem from="1597390408775" duration="9073000" />
     </task>
     <servers />
   </component>
@@ -148,6 +152,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="399" y="161" width="1125" height="919" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1596951946829" />
+    <state x="540" y="248" key="run.anything.popup" timestamp="1597395859640">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="540" y="248" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1597395859640" />
     <state x="523" y="45" width="873" height="1034" key="search.everywhere.popup" timestamp="1597225727739">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>

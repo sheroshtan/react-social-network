@@ -15,7 +15,6 @@ const User = (props) => {
             <div className="user-info">
                 <div className="user-showcase">
                     <div className="user-name">{props.user.name}</div>
-                    <div className='user-location'>{`${"city placeholder"}, ${"country placeholder"}`}</div>
                     <div className="user-status">{props.user.status}</div>
                 </div>
             </div>
