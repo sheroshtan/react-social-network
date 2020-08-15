@@ -3,12 +3,12 @@ import {connect} from "react-redux";
 import * as axios from "axios";
 import Users from "./users";
 import {
-    changePageAC,
-    followAC,
-    setTotalUsersCountAC,
-    setUsersAC,
-    toggle_loadingAC,
-    unfollowAC } from "../../redux/users-page-reducer";
+    changePage,
+    follow,
+    setTotalUsersCount,
+    setUsers,
+    toggleLoading,
+    unFollow } from "../../redux/users-page-reducer";
 
 class UsersContainer extends React.Component {
     componentDidMount() {
@@ -56,15 +56,11 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        follow: (userId) => dispatch(followAC(userId)),
-        unFollow: (userId) => dispatch(unfollowAC(userId)),
-        setUsers: (users) => dispatch(setUsersAC(users)),
-        changePage: (page) => dispatch(changePageAC(page)),
-        setTotalUsersCount: (count) => dispatch(setTotalUsersCountAC(count)),
-        toggleLoading: (loading) => dispatch(toggle_loadingAC(loading))
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer);
+export default connect(mapStateToProps, {
+    follow,
+    unFollow,
+    setUsers,
+    changePage,
+    setTotalUsersCount,
+    toggleLoading
+})(UsersContainer);

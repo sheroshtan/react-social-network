@@ -1,5 +1,6 @@
 const ADD_POST = 'ADD_POST';
 const ON_CHANGE_POST_INPUT = 'ON_CHANGE_POST_INPUT';
+const SET_USER_PROFILE = 'SET_USER_PROFILE';
 
 let initialState = {
     postsData:[
@@ -7,6 +8,7 @@ let initialState = {
         {id: 2, likesCount: 13, text: "Aliquid aspernatur cumque debitis esse id necessitatibus nihil recusandae reprehenderit voluptate! Alias aliquam dolore eaque eveniet hic iure magni neque nisi non, pariatur quam quis ratione totam vitae voluptatibus.Fuga? Ad aperiam, atque culpa cupiditate eveniet facilis natus quae quaerat rem. Accusamus cumque dolor esse iusto, molestiae molestias natus necessitatibus non quae quam quidem quos rem rerum tempore velit vero."},
         {id: 3, likesCount: 217, text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam atque dignissimos enim facilis labore molestiae nisi non sunt tempore velit? Consequuntur, dolorum eius omnis possimus quam quibusdam quisquam sunt voluptate? Aliquam aperiam, dolore dolorum earum illum inventore mollitia necessitatibus nisi quaerat quia quidem quo, repellat reprehenderit tempore tenetur. Aliquid atque consectetur consequatur eligendi ex iure numquam recusandae sequi vero voluptas?"}
     ],
+    profile: null,
     inputValue: ''
 };
 
@@ -28,26 +30,31 @@ const profilePageReducer = (state = initialState, action) => {
                 inputValue: ''
             };
         }
-
         case ON_CHANGE_POST_INPUT : {
             return {
                 ...state,
                 inputValue: action.text
             };
         }
-
+        case SET_USER_PROFILE: {
+            return {
+                ...state,
+                profile: action.profile
+            }
+        }
         default:
             return state;
     }
 }
 
 export const createAddPostAction = () => ( {type: ADD_POST} );
-
+export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
 export const createChangePostInputAction = (text) => {
     return {
         type: ON_CHANGE_POST_INPUT,
         text: text
     }
 };
+
 
 export default profilePageReducer;

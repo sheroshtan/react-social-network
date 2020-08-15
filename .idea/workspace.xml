@@ -20,13 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33f5795d-624b-4bdb-a098-94decb29fed0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/common/preloader/preloader.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/preloader/preloader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/preloader-image.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/profile/profileContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dialogs/dialogs-container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dialogs/dialogs-container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/profile-info/profile-info.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profile-info/profile-info.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/profile-info/profile-info.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profile-info/profile-info.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/users/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/users/users-container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/users-container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/users/users.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profile-page-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-page-reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/users-page-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-page-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +66,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/profile" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -74,15 +78,15 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/common" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/profile" />
       <recent name="$PROJECT_DIR$/src/images" />
       <recent name="$PROJECT_DIR$/src/components/users" />
       <recent name="$PROJECT_DIR$/src/redux" />
       <recent name="$PROJECT_DIR$/src/components/dialogs" />
-      <recent name="$PROJECT_DIR$/src/components/profile/my-posts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/common" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -115,7 +119,8 @@
       <workItem from="1597132149168" duration="2624000" />
       <workItem from="1597213939461" duration="8428000" />
       <workItem from="1597230475770" duration="3605000" />
-      <workItem from="1597390408775" duration="9073000" />
+      <workItem from="1597390408775" duration="9815000" />
+      <workItem from="1597484733043" duration="9285000" />
     </task>
     <servers />
   </component>
