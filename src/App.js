@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from "react-router-dom";
-import Header from "./components/header/header";
+import HeaderContainer from "./components/header/headerContainer";
 import SidebarNav from "./components/sidebar-nav/sidebarNav";
 import Friends from "./components/friends/friends";
 import News from "./components/news/news";
@@ -10,16 +10,17 @@ import UsersContainer from "./components/users/users-container";
 import ProfileContainer from "./components/profile/profileContainer";
 import './App.css';
 
+
 const App = (props) => {
 
     return (
         <div className="app-wrapper grid">
-            <Header/>
+            <HeaderContainer/>
             <main>
                 <div className="container main-container grid">
                     <SidebarNav />
                     <div className='content bg-white'>
-                        <Route path="/profile"
+                        <Route path="/profile/:userId?"
                                render={() => <ProfileContainer />}/>
 
                         <Route path="/dialogs"

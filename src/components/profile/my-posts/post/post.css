@@ -8,6 +8,7 @@
 .post img {
     width: 40px;
     margin-right: 10px;
+    flex-shrink: 0;
 }
 .post p {
     text-align: justify;

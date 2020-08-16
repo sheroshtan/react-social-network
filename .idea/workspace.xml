@@ -20,18 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33f5795d-624b-4bdb-a098-94decb29fed0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/profile/profileContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/header/headerContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/auth-reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dialogs/dialogs-container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dialogs/dialogs-container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/profile-info/profile-info.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profile-info/profile-info.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/profile-info/profile-info.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profile-info/profile-info.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/users/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/users/users-container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/users-container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/profile-page-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-page-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/users-page-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-page-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/my-posts/post/post.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/my-posts/post/post.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/profileContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profileContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +65,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/profile" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/header" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -78,15 +77,15 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/common" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/header" />
+      <recent name="$PROJECT_DIR$/src/redux" />
       <recent name="$PROJECT_DIR$/src/components/profile" />
       <recent name="$PROJECT_DIR$/src/images" />
       <recent name="$PROJECT_DIR$/src/components/users" />
-      <recent name="$PROJECT_DIR$/src/redux" />
-      <recent name="$PROJECT_DIR$/src/components/dialogs" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/common" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -121,6 +120,7 @@
       <workItem from="1597230475770" duration="3605000" />
       <workItem from="1597390408775" duration="9815000" />
       <workItem from="1597484733043" duration="9285000" />
+      <workItem from="1597567920180" duration="14084000" />
     </task>
     <servers />
   </component>
@@ -161,10 +161,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="540" y="248" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1597395859640" />
-    <state x="523" y="45" width="873" height="1034" key="search.everywhere.popup" timestamp="1597225727739">
+    <state x="523" y="45" width="873" height="1034" key="search.everywhere.popup" timestamp="1597578948879">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="523" y="45" width="873" height="1034" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1597225727739" />
+    <state x="523" y="45" width="873" height="1034" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1597578948879" />
     <state x="575" y="45" width="840" height="1034" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1597049178676" />
   </component>
 </project>

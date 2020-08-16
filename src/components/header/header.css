@@ -6,6 +6,7 @@
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 .header .header-logo {
     display: flex;
@@ -18,4 +19,31 @@
 }
 .header .header-logo img{
     margin-right: 10px;
+}
+.login {
+    font-size: 22px;
+    cursor: pointer;
+}
+.login a{
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.login a img {
+    width: 40px;
+    margin-right: 6px;
+}
+.header .login a:active,
+.header .login a:hover,
+.header .login a:focus{
+    color: #fff;
+}
+.login a .icon-login {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.login a span{
+    display: inline-block;
+    vertical-align: middle;
 }
