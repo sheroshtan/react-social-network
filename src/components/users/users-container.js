@@ -15,7 +15,9 @@ class UsersContainer extends React.Component {
         if(!this.props.users.length) {
             this.props.toggleLoading(!this.props.isLoading);
             axios
-                .get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`)
+                .get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`, {
+                    withCredentials: true
+                })
                 .then(res => {
                     this.props.setUsers(res.data.items);
                 })
@@ -27,7 +29,9 @@ class UsersContainer extends React.Component {
         this.props.toggleLoading(!this.props.isLoading);
         this.props.changePage(page);
         axios
-            .get(`https://social-network.samuraijs.com/api/1.0/users?page=${page}&count=${this.props.pageSize}`)
+            .get(`https://social-network.samuraijs.com/api/1.0/users?page=${page}&count=${this.props.pageSize}`, {
+                withCredentials: true
+            })
             .then(res => this.props.setUsers(res.data.items))
             .then(() => this.props.toggleLoading(!this.props.isLoading))
     }
