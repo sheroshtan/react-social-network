@@ -22,7 +22,7 @@ const usersPageReducer = (state = initialState, action) => {
                     if(user.id === action.userId) {
                         return {
                             ...user,
-                            isFollowed: true
+                            followed: true
                         }
                     }
                     return  {...user};
@@ -36,7 +36,7 @@ const usersPageReducer = (state = initialState, action) => {
                     if(user.id === action.userId) {
                         return {
                             ...user,
-                            isFollowed: false
+                            followed: false
                         }
                     }
                     return  {...user};

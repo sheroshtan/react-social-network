@@ -23,6 +23,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/users/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/users/users-container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/users-container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/users/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/users-page-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-page-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +34,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -113,7 +115,7 @@
       <workItem from="1597390408775" duration="9815000" />
       <workItem from="1597484733043" duration="9285000" />
       <workItem from="1597567920180" duration="14510000" />
-      <workItem from="1597657150073" duration="3601000" />
+      <workItem from="1597657150073" duration="7502000" />
     </task>
     <servers />
   </component>

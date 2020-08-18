@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
-import * as axios from "axios";
+import {getUsers} from "../../api/api";
 import Users from "./users";
 import {
     changePage,
@@ -14,26 +14,24 @@ class UsersContainer extends React.Component {
     componentDidMount() {
         if(!this.props.users.length) {
             this.props.toggleLoading(!this.props.isLoading);
-            axios
-                .get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`, {
-                    withCredentials: true
-                })
+
+            getUsers(this.props.currentPage, this.props.pageSize)
                 .then(res => {
-                    this.props.setUsers(res.data.items);
+                    this.props.setUsers(res.items);
+                    this.props.toggleLoading(!this.props.isLoading);
                 })
-                .then(() => this.props.toggleLoading(!this.props.isLoading))
         }
     }
 
     onChangePage = (page) => {
         this.props.toggleLoading(!this.props.isLoading);
         this.props.changePage(page);
-        axios
-            .get(`https://social-network.samuraijs.com/api/1.0/users?page=${page}&count=${this.props.pageSize}`, {
-                withCredentials: true
+
+        getUsers(page, this.props.pageSize)
+            .then(res => {
+                this.props.setUsers(res.items);
+                this.props.toggleLoading(!this.props.isLoading);
             })
-            .then(res => this.props.setUsers(res.data.items))
-            .then(() => this.props.toggleLoading(!this.props.isLoading))
     }
 
     render() {

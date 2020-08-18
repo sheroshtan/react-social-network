@@ -4,7 +4,6 @@ import {NavLink} from "react-router-dom";
 import * as axios from "axios";
 
 const User = (props) => {
-    
     return (
         <div className="user">
             <div className="user-photo">

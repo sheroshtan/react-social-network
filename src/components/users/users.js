@@ -7,9 +7,9 @@ const Users = (props) => {
     let pages = [];
     const pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
     const users = props.users.map(user => <User key={user.id}
-                                                     user={user}
-                                                     follow={props.follow}
-                                                     unFollow={props.unFollow}/>);
+                                                user={user}
+                                                follow={props.follow}
+                                                unFollow={props.unFollow}/>);
 
     for(let i = 1; i <= pagesCount; i++) {
         pages.push(i);
