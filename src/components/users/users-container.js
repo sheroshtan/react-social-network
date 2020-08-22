@@ -1,21 +1,23 @@
 import React from "react";
 import {connect} from "react-redux";
-import {getUsers} from "../../api/api";
 import Users from "./users";
 import {
     changePage,
     follow,
     setTotalUsersCount,
     setUsers,
+    toggleFollowing,
     toggleLoading,
-    unFollow } from "../../redux/users-page-reducer";
+    unFollow
+} from "../../redux/users-page-reducer";
+import {UsersApi} from "../../api/api";
 
 class UsersContainer extends React.Component {
     componentDidMount() {
         if(!this.props.users.length) {
             this.props.toggleLoading(!this.props.isLoading);
 
-            getUsers(this.props.currentPage, this.props.pageSize)
+            UsersApi.getUsers(this.props.currentPage, this.props.pageSize)
                 .then(res => {
                     this.props.setUsers(res.items);
                     this.props.toggleLoading(!this.props.isLoading);
@@ -27,7 +29,7 @@ class UsersContainer extends React.Component {
         this.props.toggleLoading(!this.props.isLoading);
         this.props.changePage(page);
 
-        getUsers(page, this.props.pageSize)
+        UsersApi.getUsers(page, this.props.pageSize)
             .then(res => {
                 this.props.setUsers(res.items);
                 this.props.toggleLoading(!this.props.isLoading);
@@ -38,6 +40,8 @@ class UsersContainer extends React.Component {
         return (
             <Users users={this.props.users}
                    isLoading={this.props.isLoading}
+                   isFollowingInProgress={this.props.isFollowingInProgress}
+                   toggleFollowing={this.props.toggleFollowing}
                    totalUsersCount={this.props.totalUsersCount}
                    pageSize={this.props.pageSize}
                    currentPage={this.props.currentPage}
@@ -54,7 +58,8 @@ const mapStateToProps = (state) => {
         pageSize: state.usersPage.pageSize,
         totalUsersCount: state.usersPage.totalUsersCount,
         currentPage: state.usersPage.currentPage,
-        isLoading: state.usersPage.isLoading
+        isLoading: state.usersPage.isLoading,
+        isFollowingInProgress: state.usersPage.isFollowingInProgress
     }
 }
 
@@ -64,5 +69,6 @@ export default connect(mapStateToProps, {
     setUsers,
     changePage,
     setTotalUsersCount,
-    toggleLoading
+    toggleLoading,
+    toggleFollowing
 })(UsersContainer);

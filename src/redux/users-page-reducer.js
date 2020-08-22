@@ -4,13 +4,15 @@ const SET_USERS = 'SET_USERS';
 const CHANGE_PAGE = 'CHANGE_PAGE';
 const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
 const TOGGLE_LOADING = 'TOGGLE_LOADING';
+const TOGGLE_FOLLOWING = 'TOGGLE_FOLLOWING';
 
 let initialState = {
     users: [],
     pageSize: 5,
     totalUsersCount: 50,
     currentPage: 1,
-    isLoading: false
+    isLoading: false,
+    isFollowingInProgress: []
 };
 
 const usersPageReducer = (state = initialState, action) => {
@@ -64,6 +66,14 @@ const usersPageReducer = (state = initialState, action) => {
                 isLoading: action.isLoading
             }
         }
+        case TOGGLE_FOLLOWING: {
+            return {
+                ...state,
+                isFollowingInProgress: action.isLoading
+                    ? [...state.isFollowingInProgress, action.userId]
+                    : state.isFollowingInProgress.filter(id => id !== action.userId)
+            }
+        }
         default:
             return state;
     }
@@ -75,5 +85,6 @@ export const setUsers = (users) => ( {type: SET_USERS, users} );
 export const changePage = (page) => ( {type: CHANGE_PAGE, page} );
 export const setTotalUsersCount = (count) => ( {type: SET_TOTAL_USERS_COUNT, count} );
 export const toggleLoading = (loading) => ( {type:TOGGLE_LOADING, isLoading: loading} );
+export const toggleFollowing = (loading, userId) => ( {type:TOGGLE_FOLLOWING, isLoading: loading, userId} );
 
 export default usersPageReducer;

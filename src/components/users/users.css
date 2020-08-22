@@ -37,6 +37,16 @@
     color: #fff;
     border-color: #d12648;
 }
+.users-wrapper .user .user-photo .btn-follow:disabled {
+    background-color: gainsboro;
+    border-color: gainsboro;
+    cursor: progress;
+    color: #fff;
+}
+.users-wrapper .user .user-photo .btn-follow.followed:disabled {
+    background-color: gainsboro;
+    border-color: gainsboro;
+}
 .users-wrapper .user .user-info{
     display: flex;
     font-size: 18px;

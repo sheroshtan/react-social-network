@@ -9,7 +9,9 @@ const Users = (props) => {
     const users = props.users.map(user => <User key={user.id}
                                                 user={user}
                                                 follow={props.follow}
-                                                unFollow={props.unFollow}/>);
+                                                unFollow={props.unFollow}
+                                                toggleFollowing={props.toggleFollowing}
+                                                isFollowingInProgress={props.isFollowingInProgress}/>);
 
     for(let i = 1; i <= pagesCount; i++) {
         pages.push(i);
@@ -19,8 +21,8 @@ const Users = (props) => {
         return <span key={page}
                      className={props.currentPage === page ? 'selected-page' : ''}
                      onClick={() => props.onChangePage(page)}>
-                         { page }
-                   </span>
+                     { page }
+               </span>
     });
 
     return (
