@@ -1,3 +1,5 @@
+import {UsersApi} from "../api/api";
+
 const ADD_POST = 'ADD_POST';
 const ON_CHANGE_POST_INPUT = 'ON_CHANGE_POST_INPUT';
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
@@ -47,14 +49,23 @@ const profilePageReducer = (state = initialState, action) => {
     }
 }
 
+// action creators
 export const createAddPostAction = () => ( {type: ADD_POST} );
-export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
+const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
 export const createChangePostInputAction = (text) => {
     return {
         type: ON_CHANGE_POST_INPUT,
         text: text
     }
 };
+
+// thunk creators
+export const getUserProfile = (userId) => {
+    return (dispatch) => {
+        UsersApi.getProfile(userId)
+            .then(res => dispatch(setUserProfile(res.data)))
+    }
+}
 
 
 export default profilePageReducer;

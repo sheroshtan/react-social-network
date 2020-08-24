@@ -1,4 +1,5 @@
-import {combineReducers, createStore} from "redux";
+import {applyMiddleware, combineReducers, createStore} from "redux";
+import thunk from "redux-thunk";
 import profilePageReducer from "./profile-page-reducer";
 import messagesPageReducer from "./messages-page-reducer";
 import usersPageReducer from "./users-page-reducer";
@@ -11,7 +12,7 @@ const reducers = combineReducers({
     auth: authReducer
 });
 
-const store = createStore(reducers);
+const store = createStore(reducers, applyMiddleware(thunk));
 
 // for practice
 window.store = store;

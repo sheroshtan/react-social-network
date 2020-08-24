@@ -4,36 +4,21 @@ import Users from "./users";
 import {
     changePage,
     follow,
-    setTotalUsersCount,
+    getUsers,
     setUsers,
     toggleFollowing,
-    toggleLoading,
     unFollow
 } from "../../redux/users-page-reducer";
-import {UsersApi} from "../../api/api";
 
 class UsersContainer extends React.Component {
     componentDidMount() {
-        if(!this.props.users.length) {
-            this.props.toggleLoading(!this.props.isLoading);
-
-            UsersApi.getUsers(this.props.currentPage, this.props.pageSize)
-                .then(res => {
-                    this.props.setUsers(res.items);
-                    this.props.toggleLoading(!this.props.isLoading);
-                })
-        }
+        const { currentPage, pageSize } = this.props;
+        this.props.getUsers(currentPage, pageSize);
     }
 
     onChangePage = (page) => {
-        this.props.toggleLoading(!this.props.isLoading);
         this.props.changePage(page);
-
-        UsersApi.getUsers(page, this.props.pageSize)
-            .then(res => {
-                this.props.setUsers(res.items);
-                this.props.toggleLoading(!this.props.isLoading);
-            })
+        this.props.getUsers(page, this.props.pageSize);
     }
 
     render() {
@@ -63,12 +48,5 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {
-    follow,
-    unFollow,
-    setUsers,
-    changePage,
-    setTotalUsersCount,
-    toggleLoading,
-    toggleFollowing
-})(UsersContainer);
+export default connect(mapStateToProps,
+    {follow, unFollow, setUsers, changePage, toggleFollowing, getUsers})(UsersContainer);

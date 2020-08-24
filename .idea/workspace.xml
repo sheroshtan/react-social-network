@@ -21,11 +21,16 @@
   <component name="ChangeListManager">
     <list default="true" id="33f5795d-624b-4bdb-a098-94decb29fed0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/headerContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/headerContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/profileContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profileContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/users/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/users/users-container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/users-container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/users/users.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/users.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/users/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/auth-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profile-page-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-page-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/users-page-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-page-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +127,10 @@
       <workItem from="1597766229193" duration="2131000" />
       <workItem from="1598020684528" duration="620000" />
       <workItem from="1598083858827" duration="244000" />
-      <workItem from="1598113727877" duration="6177000" />
+      <workItem from="1598113727877" duration="6242000" />
+      <workItem from="1598259535776" duration="785000" />
+      <workItem from="1598260382849" duration="11432000" />
+      <workItem from="1598273543850" duration="7697000" />
     </task>
     <servers />
   </component>
@@ -159,11 +167,15 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="779" y="311" width="446" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1595952588975" />
-    <state x="236" y="77" width="1125" height="919" key="SettingsEditor" timestamp="1598021058198">
+    <state x="236" y="77" width="1271" height="912" key="SettingsEditor" timestamp="1598260553696">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="236" y="77" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1598021058198" />
+    <state x="236" y="77" width="1271" height="912" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1598260553696" />
     <state x="399" y="161" width="1125" height="919" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1596951946829" />
+    <state x="264" y="72" width="1216" height="970" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1598273627038">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="264" y="72" width="1216" height="970" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1598273627038" />
     <state x="540" y="248" key="run.anything.popup" timestamp="1597395859640">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
