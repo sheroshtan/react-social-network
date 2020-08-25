@@ -7,14 +7,14 @@ const mapStateToProps = (state) => {
     return {
         conversationsData: state.messagesPage.conversationsData,
         messagesData: state.messagesPage.messagesData,
-        inputValue: state.messagesPage.inputValue
+        inputValue: state.messagesPage.inputValue,
+        isAuth: state.auth.isAuth
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
         onSendMessage: () => dispatch(createSendMessageAction('YOU')),
-
         onChangeMessage: (text) => dispatch(createChangeMessageAction(text))
     }
 }

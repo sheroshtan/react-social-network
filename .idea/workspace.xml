@@ -21,16 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="33f5795d-624b-4bdb-a098-94decb29fed0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dialogs/dialogs-container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dialogs/dialogs-container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dialogs/dialogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dialogs/dialogs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header/headerContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/headerContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/profileContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profileContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/users/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/users/users-container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/users-container.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/auth-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/profile-page-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-page-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/users-page-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-page-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,7 +127,8 @@
       <workItem from="1598113727877" duration="6242000" />
       <workItem from="1598259535776" duration="785000" />
       <workItem from="1598260382849" duration="11432000" />
-      <workItem from="1598273543850" duration="7697000" />
+      <workItem from="1598273543850" duration="9375000" />
+      <workItem from="1598350330036" duration="2264000" />
     </task>
     <servers />
   </component>

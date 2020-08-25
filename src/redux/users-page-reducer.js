@@ -11,7 +11,7 @@ const TOGGLE_FOLLOWING = 'TOGGLE_FOLLOWING';
 let initialState = {
     users: [],
     pageSize: 5,
-    totalUsersCount: 1000,
+    totalUsersCount: 50,
     currentPage: 1,
     isLoading: false,
     isFollowingInProgress: []
