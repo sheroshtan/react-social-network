@@ -2,13 +2,14 @@ import {createChangeMessageAction, createSendMessageAction} from "../../redux/me
 import Dialogs from "./dialogs";
 import {connect} from "react-redux";
 import './dialogs.css';
+import {withAuthRedirect} from "../../hoc-helpers/with-auth-redirect";
+import {compose} from "redux";
 
 const mapStateToProps = (state) => {
     return {
         conversationsData: state.messagesPage.conversationsData,
         messagesData: state.messagesPage.messagesData,
         inputValue: state.messagesPage.inputValue,
-        isAuth: state.auth.isAuth
     }
 }
 
@@ -19,4 +20,7 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Dialogs);
+export default compose(
+    connect(mapStateToProps, mapDispatchToProps),
+    withAuthRedirect
+)(Dialogs);

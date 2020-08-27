@@ -20,15 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33f5795d-624b-4bdb-a098-94decb29fed0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/hoc-helpers/with-auth-redirect.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/dialogs/dialogs-container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dialogs/dialogs-container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dialogs/dialogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dialogs/dialogs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/headerContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/headerContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/profileContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profileContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/auth-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/users-page-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-page-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +123,8 @@
       <workItem from="1598259535776" duration="785000" />
       <workItem from="1598260382849" duration="11432000" />
       <workItem from="1598273543850" duration="9375000" />
-      <workItem from="1598350330036" duration="2264000" />
+      <workItem from="1598350330036" duration="2868000" />
+      <workItem from="1598524222937" duration="5553000" />
     </task>
     <servers />
   </component>
@@ -174,9 +170,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="264" y="72" width="1216" height="970" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1598273627038" />
-    <state x="540" y="248" key="run.anything.popup" timestamp="1597395859640">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="540" y="243" key="run.anything.popup" timestamp="1598529480534">
+      <screen x="0" y="21" width="1920" height="1059" />
     </state>
+    <state x="540" y="243" key="run.anything.popup/0.21.1920.1059@0.21.1920.1059" timestamp="1598529480534" />
     <state x="540" y="248" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1597395859640" />
     <state x="523" y="45" width="873" height="1034" key="search.everywhere.popup" timestamp="1598020851278">
       <screen x="0" y="27" width="1920" height="1053" />
