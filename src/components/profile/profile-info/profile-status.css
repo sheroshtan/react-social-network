@@ -1,0 +1,20 @@
+.profile-status {
+    font-size: 18px;
+    font-style: italic;
+}
+.profile-status span {
+    display: inline-block;
+    padding: 4px 5px 4px 0;
+    color: rgba(152, 126, 245, 0.57);
+    cursor: pointer;
+}
+.profile-status span:hover {
+    text-decoration: underline;
+}
+.profile-description .profile-status input {
+    font-size: 18px;
+    padding: 4px 5px;
+    outline: none;
+    border: 1px solid rgba(152, 126, 245, 0.43);
+    border-radius: 4px;
+}

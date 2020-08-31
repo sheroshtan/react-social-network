@@ -22,7 +22,7 @@ const Header = (props) => {
     return (
         <header className="header">
             <div className="container">
-                <a href="http://localhost:3000/profile" className="header-logo">
+                <a href="http://localhost:3000/" className="header-logo">
                     <img className="logo" src={Logo} alt="logo"/>
                     <span>Social Network</span>
                 </a>

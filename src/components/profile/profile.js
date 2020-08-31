@@ -4,9 +4,12 @@ import ProfileInfo from "./profile-info/profile-info";
 import './profile.css';
 
 const Profile = (props) => {
+
+    const { profile, status, updateStatus} = props;
+
     return (
         <div>
-            <ProfileInfo profile={props.profile}/>
+            <ProfileInfo profile={profile} status={status} updateStatus={updateStatus}/>
             <MyPostsContainer />
         </div>
     )

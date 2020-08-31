@@ -10,7 +10,7 @@ import UsersContainer from "./components/users/users-container";
 import ProfileContainer from "./components/profile/profileContainer";
 import './App.css';
 import Login from "./components/login/login";
-
+import MainPage from "./components/main-page/mainPage";
 
 const App = (props) => {
 
@@ -21,6 +21,9 @@ const App = (props) => {
                 <div className="container main-container grid">
                     <SidebarNav />
                     <div className='content bg-white'>
+                        <Route exact path="/"
+                               render={() => <MainPage />}/>
+
                         <Route path="/profile/:userId?"
                                render={() => <ProfileContainer />}/>
 
