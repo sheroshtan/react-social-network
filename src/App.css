@@ -1,4 +1,8 @@
 /*RESET START*/
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
 a {
   text-decoration: none;
   color: #404040;
@@ -19,11 +23,10 @@ button {
   border: none;
   outline: none;
 }
-/*RESET END*/
-* {
-  margin: 0;
-  box-sizing: border-box;
+h1 {
+  margin-bottom: 20px;
 }
+/*RESET END*/
 .logo {
   height: 44px;
 }
@@ -74,4 +77,46 @@ main .container.main-container {
 main .sidebar-nav {
   display: flex;
   flex-direction: column;
+}
+input[type="checkbox"] {
+  display: none;
+}
+.input-group, .checkbox-group {
+  margin-bottom: 12px;
+}
+.input-group input[type='text'],
+.input-group input[type='password'] {
+  min-width: 220px;
+  padding: 6px 8px;
+  outline: none;
+  font-size: 16px;
+  border: 1px solid rgba(152,126,245, .3);
+  border-radius: 3px;
+  font-family: "Verdana", sans-serif;
+}
+.checkbox-group input[type='checkbox'] + label {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+.checkbox-group input[type='checkbox'] + label::before {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  margin-right: 4px;
+  width: 18px;
+  height: 18px;
+  background-color: rgba(195, 187, 187, 0.25);
+  border: 6px solid transparent;
+  border-radius: 2px;
+}
+.checkbox-group input[type='checkbox']:checked + label::before {
+  border-color: #987EF5;
+}
+.input-group input:focus, .input-group input:active {
+  border-color: #b87ef5;
+}
+.checkbox-group + .checkbox-group {
+  margin-top: 8px;
 }

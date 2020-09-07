@@ -89,6 +89,4 @@ export const updateStatus = (status) => (dispatch) => {
         })
 }
 
-
-
 export default profilePageReducer;

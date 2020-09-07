@@ -10,7 +10,7 @@ const Header = (props) => {
 
     const authContent = props.isAuth
         ?   <>
-            <img src={props.photos.small || Avatar} alt="profile-avatar"/>
+                <img src={props.photos.small || Avatar} alt="profile-avatar"/>
                 <span>{props.login}</span>
             </>
         :
