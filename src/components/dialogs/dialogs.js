@@ -2,24 +2,14 @@ import React from "react";
 import Dialog from "./dialog/dialog";
 import Message from "./message/message";
 import './dialogs.css';
+import {Field, reduxForm} from "redux-form";
 
 const Dialogs = (props) => {
 
     const { conversationsData, messagesData } = props;
 
-    const newMessage = React.createRef();
-
-    const sendMessage = () => {
-        props.onSendMessage();
-    }
-
-    const changeMessage = (e) => {
-        const text = e.target.value;
-        props.onChangeMessage(text);
-    }
-
-    const formPreventDefault = (e) => {
-        e.preventDefault();
+    const sendMessage = (formData) => {
+        props.sendMessage('YOU', formData.newMessage);
     }
 
     const dialogItems = conversationsData
@@ -43,19 +33,21 @@ const Dialogs = (props) => {
                         messageItems
                     }
                 </div>
-
-                <form name="message-form" className="form-default" onSubmit={formPreventDefault}>
-                    <textarea name="new-message"
-                              id="new-message"
-                              ref={newMessage}
-                              onChange={changeMessage}
-                              value={props.inputValue}
-                    />
-                    <button className="btn purple btn-add-active" onClick={sendMessage}>Send</button>
-                </form>
+                <MessageFormRedux onSubmit={sendMessage}/>
             </div>
         </div>
     )
 }
+
+const MessageForm = (props) => {
+    return (
+        <form name="messageForm" className="form-default" onSubmit={props.handleSubmit}>
+            <Field name="newMessage" component='textarea' />
+            <button className="btn purple btn-add-active">Send</button>
+        </form>
+    )
+}
+
+const MessageFormRedux = reduxForm({form:'message'})(MessageForm);
 
 export default Dialogs;

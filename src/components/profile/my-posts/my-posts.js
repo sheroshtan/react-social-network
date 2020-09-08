@@ -1,39 +1,19 @@
 import React from "react";
 import Post from "./post/post";
 import './my-posts.css';
+import {Field, reduxForm} from "redux-form";
 
 const MyPosts = (props) => {
 
-    const { postsData, inputValue } = props;
+    const { postsData } = props;
 
-    const newMessage = React.createRef();
-
-    const addPost = () => {
-        props.onAddPost();
-    };
-
-    const changePost = (e) => {
-        let text = e.target.value;
-        props.onChangePost(text);
-    };
-
-    const formPreventDefault = (e) => {
-        e.preventDefault();
+    const addPost = (formData) => {
+        props.addPost(formData.newPost);
     };
 
     return (
         <div className="posts-wrapper">
-            <form name="new-post" className="form-default" onSubmit={ formPreventDefault }>
-                <label htmlFor="new-post">New post</label>
-                <textarea name="new-post"
-                          id="new-post"
-                          ref={ newMessage }
-                          onChange={ changePost }
-                          value={ inputValue } />
-                <button className="btn purple btn-add-post" onClick={addPost}>
-                        Publish
-                </button>
-            </form>
+            <MyPostsFormRedux onSubmit={addPost}/>
             <div className="posts">
                 <span className="title-posts">Recent posts:</span>
                 {
@@ -44,5 +24,17 @@ const MyPosts = (props) => {
         </div>
     )
 }
+
+const MyPostsForm = (props) => {
+    return (
+        <form name="newPost" className="form-default" onSubmit={props.handleSubmit}>
+            <label htmlFor="new-post">New post</label>
+            <Field name="newPost" id="new-post" component='textarea'/>
+            <button className="btn purple btn-add-post">Publish</button>
+        </form>
+    )
+}
+
+const MyPostsFormRedux = reduxForm({form:'myPosts'})(MyPostsForm);
 
 export default MyPosts;

@@ -93,6 +93,7 @@ input[type="checkbox"] {
   border: 1px solid rgba(152,126,245, .3);
   border-radius: 3px;
   font-family: "Verdana", sans-serif;
+
 }
 .checkbox-group input[type='checkbox'] + label {
   cursor: pointer;

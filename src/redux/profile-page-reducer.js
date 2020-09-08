@@ -1,7 +1,6 @@
 import {ProfileApi} from "../api/api";
 
 const ADD_POST = 'ADD_POST';
-const ON_CHANGE_POST_INPUT = 'ON_CHANGE_POST_INPUT';
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
 const SET_STATUS = 'SET_STATUS';
 
@@ -12,15 +11,14 @@ let initialState = {
         {id: 3, likesCount: 217, text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam atque dignissimos enim facilis labore molestiae nisi non sunt tempore velit? Consequuntur, dolorum eius omnis possimus quam quibusdam quisquam sunt voluptate? Aliquam aperiam, dolore dolorum earum illum inventore mollitia necessitatibus nisi quaerat quia quidem quo, repellat reprehenderit tempore tenetur. Aliquid atque consectetur consequatur eligendi ex iure numquam recusandae sequi vero voluptas?"}
     ],
     profile: null,
-    inputValue: '',
     status: ''
 };
 
 const profilePageReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_POST : {
-            const lastPostId = state.postsData[state.postsData.length - 1].id
-            const postText = state.inputValue;
+            const lastPostId = state.postsData[state.postsData.length - 1].id;
+            const postText = action.post;
 
             const newPost = {
                 id: lastPostId + 1,
@@ -31,13 +29,6 @@ const profilePageReducer = (state = initialState, action) => {
             return {
                 ...state,
                 postsData: [...state.postsData, newPost],
-                inputValue: ''
-            };
-        }
-        case ON_CHANGE_POST_INPUT : {
-            return {
-                ...state,
-                inputValue: action.text
             };
         }
         case SET_USER_PROFILE: {
@@ -58,15 +49,9 @@ const profilePageReducer = (state = initialState, action) => {
 }
 
 // action creators
-export const createAddPostAction = () => ( {type: ADD_POST} );
+export const addPost = (post) => ( {type: ADD_POST, post} );
 export const setStatus = (status) => ( {type: SET_STATUS, status} );
 const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
-export const createChangePostInputAction = (text) => {
-    return {
-        type: ON_CHANGE_POST_INPUT,
-        text: text
-    }
-};
 
 // thunk creators
 export const getUserProfile = (userId) => {

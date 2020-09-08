@@ -1,5 +1,4 @@
 const SEND_MESSAGE = 'SEND_MESSAGE';
-const ON_CHANGE_MESSAGE_INPUT = 'ON_CHANGE_MESSAGE_INPUT';
 
 let initialState = {
     conversationsData: [
@@ -36,54 +35,37 @@ let initialState = {
             message: "Aliquam aspernatur, assumenda blanditiis earum exercitationem inventore nesciunt, non odio quae sapiente sint vero. Laudantium minus modi nisi nostrum praesentium provident recusandae totam veniam veritatis voluptatem. Consectetur dolor est sint"
         },
 
-    ],
-    inputValue: ''
+    ]
 };
 
 const messagesPageReducer = (state = initialState, action) => {
     switch (action.type) {
-
         case SEND_MESSAGE: {
             const lastMessageId = state.messagesData[state.messagesData.length - 1].id;
             const newMessage = {
                 id: (lastMessageId + 1),
                 date: `${action.sender}. ${getDateOfMessage()}`,
                 sender: "own",
-                message: state.inputValue
+                message: action.message
             }
 
             return {
                 ...state,
-                messagesData: [...state.messagesData, newMessage],
-                inputValue: ''
+                messagesData: [...state.messagesData, newMessage]
             }
 
         }
-
-        case ON_CHANGE_MESSAGE_INPUT: {
-            return {
-                ...state,
-                inputValue: action.text,
-            };
-        }
-
         default: {
             return state;
         }
     }
 }
 
-export const createSendMessageAction = (sender) => {
+export const sendMessage = (sender,message) => {
     return {
         type: SEND_MESSAGE,
-        sender: sender
-    }
-}
-
-export const createChangeMessageAction = (text) => {
-    return {
-        type: ON_CHANGE_MESSAGE_INPUT,
-        text: text
+        sender,
+        message
     }
 }
 
