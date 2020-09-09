@@ -1,0 +1,23 @@
+form.form-default {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+}
+form.form-default textarea{
+    resize: none;
+    min-height: 80px;
+    padding: 10px;
+    font-size: 16px;
+    margin: 14px 0;
+}
+form.form-default button{
+    align-self: flex-end;
+}
+textarea.error,
+input.error {
+    border: 2px solid red !important;
+}
+.error-message {
+    display: block;
+    color: red;
+}

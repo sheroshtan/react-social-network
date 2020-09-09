@@ -81,11 +81,14 @@ main .sidebar-nav {
 input[type="checkbox"] {
   display: none;
 }
+.checkbox-group {
+  display: flex;
+}
 .input-group, .checkbox-group {
   margin-bottom: 12px;
 }
-.input-group input[type='text'],
-.input-group input[type='password'] {
+input[type='text'],
+input[type='password'] {
   min-width: 220px;
   padding: 6px 8px;
   outline: none;

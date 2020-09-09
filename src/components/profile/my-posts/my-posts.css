@@ -1,22 +1,8 @@
-form.form-default {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 14px;
-}
+
 form[name="new-post"] label{
     font-size: 18px;
     color: #987EF5;
 
-}
-form.form-default textarea{
-    resize: none;
-    min-height: 80px;
-    padding: 10px;
-    font-size: 16px;
-    margin: 14px 0;
-}
-form.form-default button{
-    align-self: flex-end;
 }
 .title-posts {
     display: block;
