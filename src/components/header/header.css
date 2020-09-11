@@ -23,11 +23,20 @@
 .login {
     font-size: 22px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.login a{
+.login {
     color: #fff;
     display: flex;
     align-items: center;
+}
+.login a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
 }
 .login a img {
     width: 40px;

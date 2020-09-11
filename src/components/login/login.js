@@ -3,14 +3,21 @@ import { Field, reduxForm } from 'redux-form';
 import './login.css';
 import {maxLengthCreator, requiredField} from "../../utilities/validators/validators";
 import {Input} from "../common/form-controls/form-controls";
+import {connect} from "react-redux";
+import {login} from "../../redux/auth-reducer";
+import {Redirect} from "react-router-dom";
 
-const maxLength15 = maxLengthCreator(15);
+const maxLength25 = maxLengthCreator(25);
 
 const Login = (props) => {
 
-    const onSubmit = (formData) => {
-        console.log(formData);
+    const onSubmit = ({email, password, rememberMe}) => {
+        props.login(email, password, rememberMe);
     };
+
+    if(props.isAuth) {
+        return <Redirect to={'/profile'}/>
+    }
 
     return (
         <div>
@@ -24,18 +31,18 @@ const LoginForm = (props) => {
     return (
         <form onSubmit={props.handleSubmit}>
             <div className="input-group">
-                <Field name='login'
-                       placeholder='Login'
+                <Field name='email'
+                       placeholder='Email'
                        type='text'
                        component={Input}
-                       validate={[requiredField, maxLength15]}/>
+                       validate={[requiredField, maxLength25]}/>
             </div>
             <div className="input-group">
                 <Field name='password'
                        placeholder='Password'
                        type='password'
                        component={Input}
-                       validate={[requiredField, maxLength15]}/>
+                       validate={[requiredField, maxLength25]}/>
             </div>
             <div className="checkbox-group">
                 <Field name='rememberMe' type='checkbox' id='remember-me' component='input'/>
@@ -50,4 +57,8 @@ const LoginForm = (props) => {
 
 const LoginFormRedux = reduxForm({form:'login'})(LoginForm);
 
-export default Login;
+const mapStateToProps = (state) => ({
+    isAuth: state.auth.isAuth
+})
+
+export default connect(mapStateToProps, { login })(Login);
