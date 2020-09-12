@@ -1,4 +1,5 @@
-import {AuthApi, ProfileApi} from "../api/api";
+import {AuthApi} from "../api/api";
+import {stopSubmit} from "redux-form";
 
 
 const SET_USER_DATA = 'SET_USER_DATA';
@@ -7,7 +8,6 @@ let initialState = {
     id: null,
     email: null,
     login: null,
-    photos: null,
     isAuth: false,
 };
 
@@ -25,24 +25,18 @@ const authReducer = (state = initialState, action) => {
 }
 
 // action creators
-export const setAuthUserData = (id, email, login, photos, isAuth) => ({
+export const setAuthUserData = (id, email, login, isAuth) => ({
     type: SET_USER_DATA,
-    payload: {id, email, login, photos, isAuth}
+    payload: {id, email, login, isAuth}
 });
 
 // thunk creators
 export const getAuthUserData = () => (dispatch) => {
-    AuthApi.me()
+    return AuthApi.me()
         .then(res => {
             if(res.data.resultCode === 0) {
                 const { id, email, login } = res.data.data;
-                let photos = null;
-
-                ProfileApi.getProfile(id)
-                    .then(res => {
-                        photos = res.data.photos;
-                    })
-                    .then(() => dispatch(setAuthUserData(id, email, login, photos, true)))
+                dispatch(setAuthUserData(id, email, login, true))
             }
         })
 }
@@ -52,18 +46,20 @@ export const login = (email, password, rememberMe) => (dispatch) => {
         .then((res) => {
             if(res.data.resultCode === 0) {
                 dispatch(getAuthUserData());
+            } else {
+                const errorMessage = res.data.messages.length ? res.data.messages[0] : 'Unknown error';
+                dispatch(stopSubmit('login', { _error: errorMessage }));
             }
         })
 }
 
 export const logout = () => (dispatch) => {
-    console.log('before logout');
     AuthApi.logout()
         .then((res) => {
             if(res.data.resultCode === 0) {
-                dispatch(setAuthUserData(null,null,null,null, false));
+                dispatch(setAuthUserData(null,null,null, false));
             } else {
-                console.log('else logout');
+
             }
         })
 }

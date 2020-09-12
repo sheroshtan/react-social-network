@@ -20,13 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33f5795d-624b-4bdb-a098-94decb29fed0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/form-controls/form-controls.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/form-controls/form-controls.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header/headerContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/headerContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/profileContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profileContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/auth-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +65,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/common/form-controls" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/redux" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -73,15 +77,15 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/common/form-controls" />
-      <recent name="$PROJECT_DIR$/src/components/header" />
-      <recent name="$PROJECT_DIR$/src/redux" />
-      <recent name="$PROJECT_DIR$/src/components/profile" />
-      <recent name="$PROJECT_DIR$/src/images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/common" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/redux" />
+      <recent name="$PROJECT_DIR$/src/components/common/form-controls" />
+      <recent name="$PROJECT_DIR$/src/components/header" />
+      <recent name="$PROJECT_DIR$/src/components/profile" />
+      <recent name="$PROJECT_DIR$/src/images" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -141,7 +145,8 @@
       <workItem from="1599516314913" duration="132000" />
       <workItem from="1599555944254" duration="8639000" />
       <workItem from="1599652638533" duration="7649000" />
-      <workItem from="1599822722496" duration="16193000" />
+      <workItem from="1599822722496" duration="16454000" />
+      <workItem from="1599902024089" duration="9847000" />
     </task>
     <servers />
   </component>
@@ -199,10 +204,10 @@
     </state>
     <state x="540" y="243" key="run.anything.popup/0.21.1920.1059@0.21.1920.1059" timestamp="1599843200001" />
     <state x="540" y="248" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1597395859640" />
-    <state x="523" y="39" width="873" height="1040" key="search.everywhere.popup" timestamp="1599842570940">
+    <state x="523" y="39" width="873" height="1040" key="search.everywhere.popup" timestamp="1599904541566">
       <screen x="0" y="21" width="1920" height="1059" />
     </state>
-    <state x="523" y="39" width="873" height="1040" key="search.everywhere.popup/0.21.1920.1059@0.21.1920.1059" timestamp="1599842570940" />
+    <state x="523" y="39" width="873" height="1040" key="search.everywhere.popup/0.21.1920.1059@0.21.1920.1059" timestamp="1599904541566" />
     <state x="523" y="45" width="873" height="1034" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1598628974895" />
     <state x="575" y="45" width="840" height="1034" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1597049178676" />
   </component>

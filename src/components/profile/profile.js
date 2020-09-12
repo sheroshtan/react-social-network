@@ -5,7 +5,7 @@ import './profile.css';
 
 const Profile = (props) => {
 
-    const { profile, status, updateStatus} = props;
+    const { profile, status, updateStatus } = props;
 
     return (
         <div>

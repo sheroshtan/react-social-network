@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from "react-router-dom";
+import {Route, withRouter} from "react-router-dom";
 import HeaderContainer from "./components/header/headerContainer";
 import SidebarNav from "./components/sidebar-nav/sidebarNav";
 import Friends from "./components/friends/friends";
@@ -11,41 +11,61 @@ import ProfileContainer from "./components/profile/profileContainer";
 import './App.css';
 import Login from "./components/login/login";
 import MainPage from "./components/main-page/mainPage";
+import {connect} from "react-redux";
+import {compose} from "redux";
+import {initApp} from "./redux/app-reducer";
+import Preloader from "./components/common/preloader/preloader";
 
-const App = (props) => {
+class App extends React.Component {
 
-    return (
-        <div className="app-wrapper grid">
-            <HeaderContainer/>
-            <main>
-                <div className="container main-container grid">
-                    <SidebarNav />
-                    <div className='content bg-white'>
-                        <Route exact path="/"
-                               render={() => <MainPage />}/>
+    componentDidMount() {
+        this.props.initApp();
+    }
 
-                        <Route path="/profile/:userId?"
-                               render={() => <ProfileContainer />}/>
+    render() {
 
-                        <Route path="/dialogs"
-                               render={() => <DialogsContainer />}/>
+        if(!this.props.initialized) return <Preloader />;
 
-                        <Route path="/users"
-                               render={() => <UsersContainer />}/>
+        return (
+            <div className="app-wrapper grid">
+                <HeaderContainer/>
+                <main>
+                    <div className="container main-container grid">
+                        <SidebarNav/>
+                        <div className='content bg-white'>
+                            <Route exact path="/"
+                                   render={() => <MainPage/>}/>
 
-                        <Route path="/login"
-                               render={() => <Login />}/>
+                            <Route path="/profile/:userId?"
+                                   render={() => <ProfileContainer/>}/>
 
-                        <Route path="/friends" component={Friends}/>
+                            <Route path="/dialogs"
+                                   render={() => <DialogsContainer/>}/>
 
-                        <Route path="/news" component={News}/>
+                            <Route path="/users"
+                                   render={() => <UsersContainer/>}/>
 
-                        <Route path="/settings" component={Settings}/>
+                            <Route path="/login"
+                                   render={() => <Login/>}/>
+
+                            <Route path="/friends" component={Friends}/>
+
+                            <Route path="/news" component={News}/>
+
+                            <Route path="/settings" component={Settings}/>
+                        </div>
                     </div>
-                </div>
-            </main>
-        </div>
-    );
-};
+                </main>
+            </div>
+        );
+    }
+}
 
-export default App;
+const mapStateToProps = (state) => ({
+    initialized: state.app.initialized
+})
+
+export default compose(
+    withRouter,
+    connect(mapStateToProps, { initApp })
+)(App);

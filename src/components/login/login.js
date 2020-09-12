@@ -48,6 +48,9 @@ const LoginForm = (props) => {
                 <Field name='rememberMe' type='checkbox' id='remember-me' component='input'/>
                 <label htmlFor="remember-me">remember me</label>
             </div>
+            {
+                props.error && <span className='error-message error-summary'>{ props.error }</span>
+            }
             <div>
                 <button className='btn purple'>Login</button>
             </div>

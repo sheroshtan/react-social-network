@@ -21,3 +21,7 @@ input.error {
     display: block;
     color: red;
 }
+.error-message.error-summary {
+    padding: 6px 0 12px;
+    text-transform: uppercase;
+}
