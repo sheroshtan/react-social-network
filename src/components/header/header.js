@@ -11,7 +11,7 @@ const Header = (props) => {
     const authContent = props.isAuth
         ?   <>
                 <NavLink to='/login'>
-                    <img src={props.photos && props.photos.small || Avatar} alt="profile-avatar"/>
+                    <img src={Avatar} alt="profile-avatar"/>
                     <span>{props.login}</span>
                 </NavLink>
                 <FontAwesomeIcon icon={faSignOutAlt} className="icon-logout" onClick={props.logout} />

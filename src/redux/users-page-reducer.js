@@ -7,6 +7,7 @@ const CHANGE_PAGE = 'CHANGE_PAGE';
 const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
 const TOGGLE_LOADING = 'TOGGLE_LOADING';
 const TOGGLE_FOLLOWING = 'TOGGLE_FOLLOWING';
+const FAKE = 'FAKE';
 
 let initialState = {
     users: [],
@@ -14,11 +15,19 @@ let initialState = {
     totalUsersCount: 50,
     currentPage: 1,
     isLoading: false,
-    isFollowingInProgress: []
+    isFollowingInProgress: [],
+    fake: 10 // only for practice with reselect library
 };
 
 const usersPageReducer = (state = initialState, action) => {
     switch (action.type) {
+        case FAKE : {
+            // only for practice with reselect library
+            return {
+                ...state,
+                fake: state.fake + 1
+            }
+        }
         case FOLLOW : {
             return {
                 ...state,
@@ -91,10 +100,10 @@ export const toggleLoading = (loading) => ( {type:TOGGLE_LOADING, isLoading: loa
 export const toggleFollowing = (loading, userId) => ( {type:TOGGLE_FOLLOWING, isLoading: loading, userId} );
 
 //thunk creators
-export const getUsers = (currentPage, pageSize) => {
+export const requestUsers = (page, pageSize) => {
     return (dispatch) => {
         dispatch(toggleLoading(true));
-        UsersApi.getUsers(currentPage, pageSize)
+        UsersApi.getUsers(page, pageSize)
             .then(res => {
                 dispatch(setUsers(res.items));
                 dispatch(toggleLoading(false));
