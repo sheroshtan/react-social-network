@@ -1,8 +1,9 @@
 import React from "react";
 import avatar from '../../../images/user-avatar.png';
 import Preloader from "../../common/preloader/preloader";
-import ProfileStatus from "./profileStatus";
+// import ProfileStatus from "./profileStatus";
 import './profile-info.css';
+import ProfileStatusWithHooks from "./profileStatusWithHooks"; // only for practice with hooks
 
 const ProfileInfo = (props) => {
     if(!props.profile) return <Preloader />;
@@ -17,7 +18,7 @@ const ProfileInfo = (props) => {
             </div>
             <div className="profile-description">
                 <div className="profile-description-group">
-                    <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
+                    <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
                 </div>
                 <div className="profile-description-group">
                     <span className="profile-term">About Me:</span>

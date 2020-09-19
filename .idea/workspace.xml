@@ -20,14 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33f5795d-624b-4bdb-a098-94decb29fed0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/redux/users-selectors.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/headerContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/headerContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/profileContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profileContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/users/users-container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/users-container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/profile-info/profile-info.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profile-info/profile-info.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/users-page-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-page-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +57,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/redux" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/profile/profile-info" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -72,18 +66,18 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/common" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/profile/profile-info" />
       <recent name="$PROJECT_DIR$/src/redux" />
       <recent name="$PROJECT_DIR$/src/components/common/form-controls" />
       <recent name="$PROJECT_DIR$/src/components/header" />
       <recent name="$PROJECT_DIR$/src/components/profile" />
-      <recent name="$PROJECT_DIR$/src/images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/common" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -146,7 +140,8 @@
       <workItem from="1599822722496" duration="16454000" />
       <workItem from="1599902024089" duration="10459000" />
       <workItem from="1599998515389" duration="743000" />
-      <workItem from="1600282070399" duration="6074000" />
+      <workItem from="1600282070399" duration="6873000" />
+      <workItem from="1600508772565" duration="6460000" />
     </task>
     <servers />
   </component>
@@ -189,11 +184,11 @@
     </state>
     <state x="735" y="307" key="FileChooserDialogImpl/0.21.1920.1059@0.21.1920.1059" timestamp="1599507074357" />
     <state x="779" y="311" width="446" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1595952588975" />
-    <state x="185" y="162" width="1271" height="912" key="SettingsEditor" timestamp="1599516441765">
-      <screen x="0" y="21" width="1920" height="1059" />
+    <state x="236" y="77" width="1271" height="912" key="SettingsEditor" timestamp="1600515420339">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="185" y="162" key="SettingsEditor/0.21.1920.1059@0.21.1920.1059" timestamp="1599516441765" />
-    <state x="236" y="77" width="1271" height="912" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1598260553696" />
+    <state x="236" y="77" width="1271" height="912" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1600515420339" />
     <state x="399" y="161" width="1125" height="919" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1596951946829" />
     <state x="264" y="72" width="1216" height="970" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1598273627038">
       <screen x="0" y="27" width="1920" height="1053" />
@@ -204,11 +199,11 @@
     </state>
     <state x="540" y="243" key="run.anything.popup/0.21.1920.1059@0.21.1920.1059" timestamp="1599843200001" />
     <state x="540" y="248" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1597395859640" />
-    <state x="523" y="45" width="873" height="1034" key="search.everywhere.popup" timestamp="1600285441522">
+    <state x="523" y="45" width="873" height="1034" key="search.everywhere.popup" timestamp="1600512929885">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="523" y="39" width="873" height="1040" key="search.everywhere.popup/0.21.1920.1059@0.21.1920.1059" timestamp="1599998641980" />
-    <state x="523" y="45" width="873" height="1034" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1600285441522" />
+    <state x="523" y="45" width="873" height="1034" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1600512929885" />
     <state x="575" y="45" width="840" height="1034" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1597049178676" />
   </component>
 </project>

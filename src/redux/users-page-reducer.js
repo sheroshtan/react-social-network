@@ -7,7 +7,6 @@ const CHANGE_PAGE = 'CHANGE_PAGE';
 const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
 const TOGGLE_LOADING = 'TOGGLE_LOADING';
 const TOGGLE_FOLLOWING = 'TOGGLE_FOLLOWING';
-const FAKE = 'FAKE';
 
 let initialState = {
     users: [],
@@ -16,18 +15,10 @@ let initialState = {
     currentPage: 1,
     isLoading: false,
     isFollowingInProgress: [],
-    fake: 10 // only for practice with reselect library
 };
 
 const usersPageReducer = (state = initialState, action) => {
     switch (action.type) {
-        case FAKE : {
-            // only for practice with reselect library
-            return {
-                ...state,
-                fake: state.fake + 1
-            }
-        }
         case FOLLOW : {
             return {
                 ...state,
