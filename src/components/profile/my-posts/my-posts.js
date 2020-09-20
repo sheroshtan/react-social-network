@@ -7,9 +7,7 @@ import {Textarea} from "../../common/form-controls/form-controls";
 
 const maxLength30 = maxLengthCreator(30);
 
-const MyPosts = (props) => {
-
-    const { postsData } = props;
+const MyPosts = React.memo(props => {
 
     const addPost = (formData) => {
         props.addPost(formData.newPost);
@@ -21,24 +19,25 @@ const MyPosts = (props) => {
             <div className="posts">
                 <span className="title-posts">Recent posts:</span>
                 {
-                    postsData.map(({id, likesCount, text}) => {
-                    return <Post message={text} likesCount={likesCount} key={id} />})
+                    props.postsData.map(({id, likesCount, text}) => {
+                        return <Post message={text} likesCount={likesCount} key={id}/>
+                    })
                 }
             </div>
         </div>
     )
-}
+});
 
 const MyPostsForm = (props) => {
     return (
         <form name="newPost" className="form-default" onSubmit={props.handleSubmit}>
             <label htmlFor="new-post">New post</label>
-            <Field name="newPost" id="new-post" component={Textarea} validate={[requiredField, maxLength30]} />
+            <Field name="newPost" id="new-post" component={Textarea} validate={[requiredField, maxLength30]}/>
             <button className="btn purple btn-add-post">Publish</button>
         </form>
     )
 }
 
-const MyPostsFormRedux = reduxForm({form:'myPosts'})(MyPostsForm);
+const MyPostsFormRedux = reduxForm({form: 'myPosts'})(MyPostsForm);
 
 export default MyPosts;
