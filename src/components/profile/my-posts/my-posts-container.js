@@ -1,6 +1,6 @@
 import {connect} from "react-redux";
 import MyPosts from "./my-posts";
-import { addPost } from "../../../redux/profile-page-reducer";
+import { addPost } from "../../../redux/profileReducer";
 import './my-posts.css';
 
 const mapStateToProps = (state) => {

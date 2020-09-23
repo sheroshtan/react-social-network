@@ -4,7 +4,7 @@ import './login.css';
 import {maxLengthCreator, requiredField} from "../../utilities/validators/validators";
 import {Input} from "../common/form-controls/form-controls";
 import {connect} from "react-redux";
-import {login} from "../../redux/auth-reducer";
+import {login} from "../../redux/authReducer";
 import {Redirect} from "react-router-dom";
 
 const maxLength25 = maxLengthCreator(25);

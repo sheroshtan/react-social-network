@@ -1,4 +1,4 @@
-import {sendMessage} from "../../redux/messages-page-reducer";
+import {sendMessage} from "../../redux/messagesReducer";
 import Dialogs from "./dialogs";
 import {connect} from "react-redux";
 import './dialogs.css';
