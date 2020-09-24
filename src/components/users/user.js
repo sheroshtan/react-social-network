@@ -2,29 +2,29 @@ import React from "react";
 import avatar from '../../images/user-avatar.png';
 import {NavLink} from "react-router-dom";
 
-const User = (props) => {
+const User = ({ user, isFollowingInProgress, unFollow, follow  }) => {
     return (
         <div className="user">
             <div className="user-photo">
-                <NavLink to={`/profile/${props.user.id}`}>
-                    <img src={props.user.photos.small ? props.user.photos.small : avatar} alt="user-avatar"/>
+                <NavLink to={`/profile/${user.id}`}>
+                    <img src={ user.photos.small ? user.photos.small : avatar} alt="user-avatar"/>
                 </NavLink>
                 {
-                    props.user.followed
-                        ?   <button disabled={props.isFollowingInProgress.some((id) => id === props.user.id)}
+                    user.followed
+                        ?   <button disabled={isFollowingInProgress.some((id) => id === user.id)}
                                   className={"btn-follow followed"}
-                                  onClick={() => props.unFollow(props.user.id)}>
+                                  onClick={() => unFollow(user.id)}>
                                 Unfollow</button>
-                        :   <button disabled={props.isFollowingInProgress.some((id) => id === props.user.id)}
+                        :   <button disabled={isFollowingInProgress.some((id) => id === user.id)}
                                   className={"btn-follow"}
-                                  onClick={() => props.follow(props.user.id)}>
+                                  onClick={() => follow(user.id)}>
                                 Follow</button>
                 }
             </div>
             <div className="user-info">
                 <div className="user-showcase">
-                    <div className="user-name">{props.user.name}</div>
-                    <div className="user-status">{props.user.status}</div>
+                    <div className="user-name">{user.name}</div>
+                    <div className="user-status">{user.status}</div>
                 </div>
             </div>
         </div>

@@ -27,9 +27,10 @@ const Login = (props) => {
     )
 }
 
-const LoginForm = (props) => {
+const LoginForm = ({ handleSubmit, error }) => {
+
     return (
-        <form onSubmit={props.handleSubmit}>
+        <form onSubmit={ handleSubmit }>
             <div className="input-group">
                 <Field name='email'
                        placeholder='Email'
@@ -49,7 +50,7 @@ const LoginForm = (props) => {
                 <label htmlFor="remember-me">remember me</label>
             </div>
             {
-                props.error && <span className='error-message error-summary'>{ props.error }</span>
+                error && <span className='error-message error-summary'>{ error }</span>
             }
             <div>
                 <button className='btn purple'>Login</button>
