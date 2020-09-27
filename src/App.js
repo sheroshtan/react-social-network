@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, withRouter} from "react-router-dom";
+import {BrowserRouter, Route, withRouter} from "react-router-dom";
 import HeaderContainer from "./components/header/headerContainer";
 import SidebarNav from "./components/sidebar-nav/sidebarNav";
 import Friends from "./components/friends/friends";
@@ -8,13 +8,14 @@ import Settings from "./components/settings/settings";
 import DialogsContainer from "./components/dialogs/dialogs-container";
 import UsersContainer from "./components/users/users-container";
 import ProfileContainer from "./components/profile/profileContainer";
-import './App.css';
 import Login from "./components/login/login";
 import MainPage from "./components/main-page/mainPage";
-import {connect} from "react-redux";
+import {connect, Provider} from "react-redux";
 import {compose} from "redux";
 import {initApp} from "./redux/appReducer";
 import Preloader from "./components/common/preloader/preloader";
+import store from "./redux/redux-store";
+import './App.css';
 
 class App extends React.Component {
 
@@ -65,7 +66,17 @@ const mapStateToProps = (state) => ({
     initialized: state.app.initialized
 })
 
-export default compose(
+const AppContainer = compose(
     withRouter,
     connect(mapStateToProps, { initApp })
 )(App);
+
+export const MainApp = () => {
+    return (
+        <BrowserRouter>
+            <Provider store={store}>
+                <AppContainer />
+            </Provider>
+        </BrowserRouter>
+    )
+}
