@@ -12,7 +12,7 @@ const TOGGLE_FOLLOWING = 'TOGGLE_FOLLOWING';
 let initialState = {
     users: [],
     pageSize: 5,
-    totalUsersCount: 50,
+    totalUsersCount: 0,
     currentPage: 1,
     isLoading: false,
     isFollowingInProgress: [],
@@ -80,6 +80,7 @@ export const requestUsers = (page, pageSize) => async (dispatch) => {
     dispatch(toggleLoading(true));
     const response = await UsersApi.getUsers(page, pageSize);
 
+    dispatch(setTotalUsersCount(response.totalCount));
     dispatch(setUsers(response.items));
     dispatch(toggleLoading(false));
 };
