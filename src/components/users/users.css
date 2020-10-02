@@ -69,19 +69,25 @@
     justify-content: center;
     border-top: 1px solid #987EF5;
 }
-.users-pagination {
+.pagination {
     padding: 20px;
     text-align: center;
 }
-.users-pagination span{
+.pagination button.pagination-control {
+    width: auto;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+.pagination span{
     display: inline-block;
     color: #987EF5;
     padding: 6px 12px;
     cursor: pointer;
+    font-size: 14px;
 }
-.users-pagination span:hover{
+.pagination span:hover{
     background-color: #987ef514;
 }
-.users-pagination .selected-page {
+.pagination .selected-page {
     background-color: #987ef514;
 }
