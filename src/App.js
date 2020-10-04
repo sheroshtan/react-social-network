@@ -5,9 +5,7 @@ import SidebarNav from "./components/sidebar-nav/sidebarNav";
 import Friends from "./components/friends/friends";
 import News from "./components/news/news";
 import Settings from "./components/settings/settings";
-import DialogsContainer from "./components/dialogs/dialogs-container";
 import UsersContainer from "./components/users/users-container";
-import ProfileContainer from "./components/profile/profileContainer";
 import Login from "./components/login/login";
 import MainPage from "./components/main-page/mainPage";
 import {connect, Provider} from "react-redux";
@@ -16,6 +14,10 @@ import {initApp} from "./redux/appReducer";
 import Preloader from "./components/common/preloader/preloader";
 import store from "./redux/redux-store";
 import './App.css';
+import {withSuspense} from "./hoc-helpers/withSuspense";
+
+const ProfileContainer = React.lazy(() => import('./components/profile/profileContainer'));
+const DialogsContainer = React.lazy(() => import('./components/dialogs/dialogs-container'));
 
 class App extends React.Component {
 
@@ -25,7 +27,7 @@ class App extends React.Component {
 
     render() {
 
-        if(!this.props.initialized) return <Preloader />;
+        if (!this.props.initialized) return <Preloader/>;
 
         return (
             <div className="app-wrapper grid">
@@ -38,10 +40,10 @@ class App extends React.Component {
                                    render={() => <MainPage/>}/>
 
                             <Route path="/profile/:userId?"
-                                   render={() => <ProfileContainer/>}/>
+                                   render={withSuspense(ProfileContainer)}/>
 
                             <Route path="/dialogs"
-                                   render={() => <DialogsContainer/>}/>
+                                   render={withSuspense(DialogsContainer)}/>
 
                             <Route path="/users"
                                    render={() => <UsersContainer/>}/>
@@ -68,14 +70,14 @@ const mapStateToProps = (state) => ({
 
 const AppContainer = compose(
     withRouter,
-    connect(mapStateToProps, { initApp })
+    connect(mapStateToProps, {initApp})
 )(App);
 
 export const MainApp = () => {
     return (
         <BrowserRouter>
             <Provider store={store}>
-                <AppContainer />
+                <AppContainer/>
             </Provider>
         </BrowserRouter>
     )
