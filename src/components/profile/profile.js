@@ -5,11 +5,15 @@ import './profile.css';
 
 const Profile = (props) => {
 
-    const { profile, status, updateStatus } = props;
+    const { profile, status, updateStatus, savePhoto, isOwner } = props;
 
     return (
         <div>
-            <ProfileInfo profile={profile} status={status} updateStatus={updateStatus}/>
+            <ProfileInfo profile={profile}
+                         status={status}
+                         updateStatus={updateStatus}
+                         savePhoto={savePhoto}
+                         isOwner={isOwner}/>
             <MyPostsContainer />
         </div>
     )

@@ -1,6 +1,14 @@
 .profile-info {
     display: flex;
 }
+.profile-photo {
+    display: flex;
+    flex-direction: column;
+}
+.profile-photo img {
+    max-width: 240px;
+    margin-bottom: 10px;
+}
 .profile-description .profile-description-group + .profile-description-group {
     margin-top: 8px;
 }

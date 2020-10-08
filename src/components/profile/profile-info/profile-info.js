@@ -11,10 +11,17 @@ const ProfileInfo = (props) => {
     const { aboutMe, fullName, lookingForAJob,
         lookingForAJobDescription, contacts, photos } = props.profile;
 
+    const onPhotoSelected = (e) => {
+        if(e.target.files.length) {
+            props.savePhoto(e.target.files[0])
+        }
+    }
+
     return (
         <div className="profile-info">
-            <div>
+            <div className="profile-photo">
                 <img src={photos.large || avatar} alt=""/>
+                { props.isOwner && <input type='file' onChange={onPhotoSelected}/>}
             </div>
             <div className="profile-description">
                 <div className="profile-description-group">

@@ -4,6 +4,7 @@ const ADD_POST = 'ADD_POST';
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
 const SET_STATUS = 'SET_STATUS';
 const DELETE_POST = 'DELETE_POST';
+const SAVE_PHOTO_SUCCESS = 'SAVE_PHOTO_SUCCESS';
 
 let initialState = {
     postsData:[
@@ -50,6 +51,15 @@ const profilePageReducer = (state = initialState, action) => {
                 status: action.status
             }
         }
+        case SAVE_PHOTO_SUCCESS: {
+            return {
+                ...state,
+                profile: {
+                    ...state.profile,
+                    photos: action.photos
+                }
+            }
+        }
         default:
             return state;
     }
@@ -59,6 +69,7 @@ const profilePageReducer = (state = initialState, action) => {
 export const addPost = (post) => ( {type: ADD_POST, post} );
 export const deletePost = (id) => ( {type: DELETE_POST, id} );
 export const setStatus = (status) => ( {type: SET_STATUS, status} );
+export const savePhotoSuccess = (photos) => ( {type: SAVE_PHOTO_SUCCESS, photos} );
 const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
 
 // thunk creators
@@ -77,6 +88,14 @@ export const updateStatus = (status) => async (dispatch) => {
 
     if (response.data.resultCode === 0) {
         dispatch(setStatus(status));
+    }
+}
+
+export const savePhoto = file => async (dispatch) => {
+    const response = await ProfileApi.savePhoto(file);
+
+    if(response.data.resultCode === 0) {
+        dispatch(savePhotoSuccess(response.data.data.photos));
     }
 }
 
