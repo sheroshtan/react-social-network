@@ -5,7 +5,7 @@ import './profile.css';
 
 const Profile = (props) => {
 
-    const { profile, status, updateStatus, savePhoto, isOwner } = props;
+    const { profile, status, updateStatus, savePhoto, isOwner, saveProfile } = props;
 
     return (
         <div>
@@ -13,7 +13,8 @@ const Profile = (props) => {
                          status={status}
                          updateStatus={updateStatus}
                          savePhoto={savePhoto}
-                         isOwner={isOwner}/>
+                         isOwner={isOwner}
+                         saveProfile={saveProfile} />
             <MyPostsContainer />
         </div>
     )

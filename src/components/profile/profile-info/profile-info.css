@@ -9,6 +9,22 @@
     max-width: 240px;
     margin-bottom: 10px;
 }
+.profile-description {
+    width: 100%;
+    position: relative;
+}
+.profile-description .fa-cog {
+    color: rgba(152, 126, 245, 0.57);
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: color .2s ease-out;
+}
+.profile-description .fa-cog:hover {
+    color: #987EF5;
+}
 .profile-description .profile-description-group + .profile-description-group {
     margin-top: 8px;
 }
@@ -16,4 +32,10 @@
     color: #987EF5;
     margin-right: 10px;
     font-size: 20px;
+}
+.profile-description-form {
+    width: 100%;
+}
+.profile-description-form .checkbox-group {
+    display: inline-block;
 }

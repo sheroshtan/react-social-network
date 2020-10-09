@@ -33,7 +33,10 @@ export const ProfileApi = {
     savePhoto(file) {
         const formData = new FormData();
         formData.append('image', file);
-        return axiosInstance.put(`profile/photo`, formData, {headers: { 'Content-Type': 'multipart/form-data' }});
+        return axiosInstance.put(`profile/photo`, formData, { headers: { 'Content-Type': 'multipart/form-data' }});
+    },
+    saveProfile(formData) {
+        return axiosInstance.put(`profile`, formData);
     }
 };
 
