@@ -44,10 +44,16 @@ export const AuthApi = {
     me() {
         return axiosInstance.get(`auth/me`);
     },
-    login(email, password, rememberMe = false) {
-        return axiosInstance.post(`auth/login`, {email, password, rememberMe});
+    login(email, password, rememberMe = false, captchaUrl = null) {
+        return axiosInstance.post(`auth/login`, {email, password, rememberMe, captchaUrl});
     },
     logout() {
         return axiosInstance.delete(`auth/login`);
+    }
+};
+
+export const SecurityApi = {
+    getCaptchaUrl() {
+        return axiosInstance.get('security/get-captcha-url');
     }
 };
